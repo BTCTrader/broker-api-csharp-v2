@@ -8,7 +8,6 @@
         public string DenominatorSymbol { get; set; }
         public string OrderType { get; set; }
         public long Timestamp { get; set; }
-        public decimal Funds { get; set; }
         public decimal Amount { get; set; }
         public decimal Fee { get; set; }
         public decimal Tax { get; set; }
@@ -16,7 +15,7 @@
         public override string ToString()
         {
             return $"Id: {Id}, Price: {Price}, NumeratorSymbol: {NumeratorSymbol}, DenominatorSymbol: {DenominatorSymbol}," +
-                   $" OrderType: {OrderType}, Timestamp: {Timestamp}, Funds: {Funds}, Amount: {Amount}, Fee: {Fee}, Amount: {Tax}";
+                   $" OrderType: {OrderType}, Timestamp: {Timestamp}, Amount: {Amount}, Fee: {Fee}, Amount: {Tax}";
         }
     }
 }
