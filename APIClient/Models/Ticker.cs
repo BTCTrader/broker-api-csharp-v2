@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace APIClient.Models
+﻿namespace APIClient.Models
 {
     public class Ticker
     {
         public string Pair { get; set; }
+        public string PairNormalized { get; set; }
         public decimal High { get; set; }
         public decimal Low { get; set; }
         public decimal Open { get; set; }
@@ -23,7 +20,7 @@ namespace APIClient.Models
 
         public override string ToString()
         {
-            return "Pair: " + Pair + "\n" + "Last: " + Last + "\n" + "High: " + High + "\n" +
+            return "Pair: " + Pair + "\n" + "PairNormalized: " + PairNormalized + "\n" + "Last: " + Last + "\n" + "High: " + High + "\n" +
                    "Low: " + Low + "\n" + "Volume: " + Volume + "\n" +
                    "Bid: " + Bid + "\n" + "Ask: " + Ask + "\n" +
                    "Open: " + Open + "\n" + "Average: " + Average + "\n" + "Daily: " + Daily + "\n" +

@@ -7,6 +7,7 @@ namespace APIClient.Models
     public class OHLC
     {
         public string PairSymbol { get; set; }
+        public string PairSymbolNormalized { get; set; }
         public long Time { get; set; }
         public string Open { get; set; }
         public string High { get; set; }
@@ -20,6 +21,7 @@ namespace APIClient.Models
         public override string ToString()
         {
             var result = "PairSymbol: " + PairSymbol;
+            result += "\n PairSymbolNormalized: " + PairSymbolNormalized;
             result += "\n Time: " + Time;
             result += "\n" + "Open: " + Open;
             result += "\n" + "High: " + High;

@@ -20,11 +20,14 @@ namespace APIClient.Models
 
         public string PairSymbol { get; set; }
 
+        public string PairSymbolNormalized { get; set; }
+
+
         public string NewOrderClientId { get; set; }
 
         public override string ToString()
         {
-            return $"Id:{Id}, Datetime {Datetime}, Type {Type}, Method {Method}, Price {Price}, Amount {Amount}, PairSymbol {PairSymbol}";
+            return $"Id:{Id}, Datetime {Datetime}, Type {Type}, Method {Method}, Price {Price}, Amount {Amount}, PairSymbol {PairSymbol}, PairSymbolNormalized {PairSymbolNormalized}";
         }
     }
 }

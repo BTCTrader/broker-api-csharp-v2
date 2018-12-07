@@ -21,6 +21,8 @@ namespace APIClient.Models
 
         public string PairSymbol { get; set; }
 
+        public string PairSymbolNormalized { get; set; }
+
         public string Type { get; set; }
 
         public string Method { get; set; }
@@ -35,7 +37,7 @@ namespace APIClient.Models
 
         public override string ToString()
         {
-            return $"Id: {Id}, Price: {Price}, Amount: {Amount}, PairSymbol: {PairSymbol}, Type: {Type}, Method: {Method}, OrderClientId: {OrderClientId}, Time: {Time}, UpdateTime: {UpdateTime}, Status: {Status}";
+            return $"Id: {Id}, Price: {Price}, Amount: {Amount}, PairSymbol: {PairSymbol}, PairSymbolNormalized: {PairSymbolNormalized}, Type: {Type}, Method: {Method}, OrderClientId: {OrderClientId}, Time: {Time}, UpdateTime: {UpdateTime}, Status: {Status}";
         }
     }
 }

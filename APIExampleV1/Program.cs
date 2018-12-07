@@ -18,7 +18,7 @@ namespace APIExampleV1
 
             var apiClientV1 = new ApiClientV1(publicKey, privateKey, resourceUrl);
 
-            var tickerList = apiClientV1.GetTicker("BTCTRY");
+            var tickerList = apiClientV1.GetTicker("BTC_TRY");
             if (tickerList.Result.Success)
             {
                 foreach (var ticker in tickerList.Result.Data)
@@ -32,7 +32,7 @@ namespace APIExampleV1
             }
 
             // Print the best bid price and amount to the console
-            var orderbook = apiClientV1.GetOrderBook("BTCTRY");
+            var orderbook = apiClientV1.GetOrderBook("BTC_TRY");
 
             if (orderbook.Result.Success)
             {
@@ -47,7 +47,7 @@ namespace APIExampleV1
             }
 
             // Print the last 10 trades in the market to the console.
-            var trades = apiClientV1.GetLastTrades("BTCTRY", 10);
+            var trades = apiClientV1.GetLastTrades("BTC_TRY", 10);
 
             if (trades.Result.Success)
             {
@@ -63,7 +63,7 @@ namespace APIExampleV1
             }
 
             // Print the last 7 days' OHLC to the console
-            var ohlc = apiClientV1.GetDailyOhlc("BTCTRY", 7);
+            var ohlc = apiClientV1.GetDailyOhlc("BTC_TRY", 7);
 
             if (ohlc.Result.Success)
             {
@@ -84,7 +84,7 @@ namespace APIExampleV1
                 OrderMethod = OrderMethod.Limit,
                 OrderType = OrderType.Sell,
                 Price = 21000m,
-                PairSymbol = "BTCTRY"
+                PairSymbol = "BTC_TRY"
             };
 
             var limitBuyOrder = new OrderInput
@@ -94,7 +94,7 @@ namespace APIExampleV1
                 OrderMethod = OrderMethod.Limit,
                 OrderType = OrderType.Buy,
                 Price = 20000m,
-                PairSymbol = "BTCTRY"
+                PairSymbol = "BTC_TRY"
             };
 
             //Create New Order
