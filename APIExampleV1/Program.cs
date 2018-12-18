@@ -87,18 +87,18 @@ namespace APIExampleV1
                 PairSymbol = "BTC_TRY"
             };
 
-            var limitBuyOrder = new OrderInput
-            {
-                Quantity = 0.001m,
-                NewOrderClientId = "test",
-                OrderMethod = OrderMethod.Limit,
-                OrderType = OrderType.Buy,
-                Price = 20000m,
-                PairSymbol = "BTC_TRY"
-            };
+            //var limitBuyOrder = new OrderInput
+            //{
+            //    Quantity = 0.001m,
+            //    NewOrderClientId = "test",
+            //    OrderMethod = OrderMethod.Limit,
+            //    OrderType = OrderType.Buy,
+            //    Price = 20000m,
+            //    PairSymbol = "BTC_TRY"
+            //};
 
             //Create New Order
-            var orderOutput = apiClientV1.CreateOrder(limitBuyOrder);
+            var orderOutput = apiClientV1.CreateOrder(limitSellOrder);
 
             if (orderOutput.Result == null)
             {
@@ -153,7 +153,7 @@ namespace APIExampleV1
             }
 
 
-            var userTrades = apiClientV1.GetUserTrades(new[] { "buy,sell" }, new[] { "try,btc" }, DateTime.UtcNow.AddDays(-30).ToUnixTime(), DateTime.UtcNow.ToUnixTime());
+            var userTrades = apiClientV1.GetUserTrades(new[] { "buy","sell" }, new[] { "try","btc" }, DateTime.UtcNow.AddDays(-320).ToUnixTime(), DateTime.UtcNow.ToUnixTime());
 
             if (userTrades.Result.Success)
             {
