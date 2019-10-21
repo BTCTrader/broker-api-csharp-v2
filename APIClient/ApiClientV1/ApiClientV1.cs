@@ -271,7 +271,7 @@ namespace APIClient.ApiClientV1
 
         private static long GetStamp()
         {
-            var stamp = DateTime.UtcNow.Ticks;
+            var stamp = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
             return stamp;
         }
