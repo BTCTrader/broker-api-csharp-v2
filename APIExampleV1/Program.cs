@@ -117,15 +117,18 @@ namespace APIExampleV1
             long orderId = 0;
             if (openOrders.Result != null && openOrders.Result.Success)
             {
-                foreach (var askOrder in openOrders.Result.Data.Asks)
+                if (openOrders.Result.Data.Asks.Count > 0)
                 {
-                    Console.WriteLine(askOrder);
-                }
+                    foreach (var askOrder in openOrders.Result.Data.Asks)
+                    {
+                        Console.WriteLine(askOrder);
+                    }
+                    orderId = openOrders.Result.Data.Asks[0].Id;
+                    foreach (var bidOrder in openOrders.Result.Data.Bids)
+                    {
+                        Console.WriteLine(bidOrder);
+                    }
 
-                orderId = openOrders.Result.Data.Asks[0].Id;
-                foreach (var bidOrder in openOrders.Result.Data.Bids)
-                {
-                    Console.WriteLine(bidOrder);
                 }
             }
 
